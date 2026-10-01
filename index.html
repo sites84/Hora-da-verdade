@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hora da Verdade — você prefere? Duas escolhas. Nenhuma saída fácil.">
+  <title>Hora da Verdade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="home" class="screen active">
+      <div class="brand">HORA DA <span>VERDADE</span></div>
+      <p class="tagline">Duas escolhas. Nenhuma saída fácil.</p>
+      <div class="levels">
+        <button class="level level-leve" data-level="leve"><b>LEVE</b><small>Comece por aqui</small></button>
+        <button class="level level-pesada" data-level="pesada"><b>PESADA</b><small>Agora começa a complicar</small></button>
+        <button class="level level-extremo" data-level="extremo"><b>EXTREMO +18</b><small>Você foi avisado</small></button>
+      </div>
+      <div class="stats"><span id="totalVotes">0</span> decisões registradas</div>
+    </section>
+
+    <section id="game" class="screen">
+      <header class="game-header">
+        <button id="backHome" class="icon-btn" aria-label="Voltar">←</button>
+        <div><span id="levelLabel">LEVE</span><small id="questionNumber">Pergunta 1</small></div>
+        <button id="shareBtn" class="icon-btn" aria-label="Compartilhar">↗</button>
+      </header>
+      <div class="progress"><div id="progressBar"></div></div>
+      <article class="question-card">
+        <div class="eyebrow">VOCÊ PREFERE?</div>
+        <h1 id="questionText"></h1>
+        <div class="choices">
+          <button id="choiceA" class="choice choice-a"></button>
+          <div class="or">OU</div>
+          <button id="choiceB" class="choice choice-b"></button>
+        </div>
+      </article>
+      <section id="result" class="result hidden">
+        <h2>Resultado da comunidade</h2>
+        <div class="bars">
+          <div><span>Opção A</span><strong id="percentA">0%</strong><div class="bar"><i id="barA"></i></div></div>
+          <div><span>Opção B</span><strong id="percentB">0%</strong><div class="bar"><i id="barB"></i></div></div>
+        </div>
+        <p id="verdict"></p>
+        <button id="nextBtn" class="next">PRÓXIMA PERGUNTA →</button>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
